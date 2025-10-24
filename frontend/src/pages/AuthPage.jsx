@@ -2,6 +2,17 @@ import "../styles/auth.css";
 import { SignInButton } from "@clerk/clerk-react";
 
 const AuthPage = () => {
+  function ErrorButton() {
+  return (
+    <button
+      onClick={() => {
+        throw new Error('This is your first error!');
+      }}
+    >
+      Break the world
+    </button>
+  );
+}
   return (
     <div className="auth-container">
       <div className="auth-left">
@@ -9,6 +20,7 @@ const AuthPage = () => {
           <div className="brand-container">
             <img src="/logo.png" alt="Slap" className="brand-logo" />
             <span className="brand-name">Slap</span>
+            {/* <ErrorButton/> */}
           </div>
 
           <h1 className="hero-title">Where Work Happens ✨</h1>
