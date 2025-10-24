@@ -93,7 +93,7 @@ const CreateChannelModal = ({ onClose }) => {
 
     if (isCreating || !client?.user) return;
 
-    setIsCreating(true);
+    setIsCreating(true); 
     setError("");
 
     try {

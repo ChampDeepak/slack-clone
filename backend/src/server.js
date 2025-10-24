@@ -8,9 +8,11 @@ import { inngest, functions } from "./config/inngest.js";
 import { chatRoutes } from "./routes/chat.route.js";
 import * as Sentry from "@sentry/node"; 
 const app = express();
+import cors from "cors";
 
 // Middleware Calls
 app.use(express.json());
+app.use(cors({origin: "http://localhost:5173", credentials: true})); 
 app.use(clerkMiddleware()) //req.auth will be available in the req obj 
 
 
