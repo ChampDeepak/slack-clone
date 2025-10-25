@@ -2,7 +2,7 @@ import {StreamChat} from "stream-chat";
 import dotenv from "dotenv";
 dotenv.config();
 
-const streamClient = StreamChat.getInstance(process.env.STREAM_API_KEY, process.env.STREAM_API_SECRET);
+const streamClient =  StreamChat.getInstance(process.env.STREAM_API_KEY, process.env.STREAM_API_SECRET);
 
 export const upsertStreamUser = async (userData) => {
   try {
@@ -31,4 +31,13 @@ export const generateStreamToken = (userId) => {
     console.log("Error generating Stream token:", error);
     return null;
   }
+};
+
+export const addUserToPublicChannels = async (newUserId) => {
+  const publicChannels = await streamClient.queryChannels({ discoverable: true });
+
+  for (const channel of publicChannels) {
+    await channel.addMembers([newUserId]);
+  }
+  console.log(publicChannels); 
 };
