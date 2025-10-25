@@ -12,7 +12,7 @@ import cors from "cors";
 
 // Middleware Calls
 app.use(express.json());
-app.use(cors({origin: "http://localhost:5173", credentials: true})); 
+app.use(cors({origin: process.env.origin, credentials: true})); 
 app.use(clerkMiddleware()) //req.auth will be available in the req obj 
 
 

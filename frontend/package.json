@@ -13,6 +13,7 @@
     "@clerk/clerk-react": "^5.53.3",
     "@sentry/node": "^10.1.0",
     "@sentry/react": "^10.1.0",
+    "@stream-io/video-react-sdk": "^1.19.2",
     "@tailwindcss/vite": "^4.1.16",
     "@tanstack/react-query": "^5.83.0",
     "axios": "^1.11.0",
