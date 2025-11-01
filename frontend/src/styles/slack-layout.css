@@ -1,0 +1,50 @@
+/* Slack Layout - Main Container */
+.slack-layout {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+/* Main Area - Everything except far left sidebar */
+.slack-layout__main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+/* Content Area - Below top header */
+.slack-layout__content {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+  min-height: 0;
+}
+
+/* Channel Content Area */
+.slack-layout__channel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  overflow: hidden;
+  min-width: 0;
+}
+
+/* Ensure Stream Chat components take full height */
+.slack-layout__channel .str-chat,
+.slack-layout__channel .str-chat__container,
+.slack-layout__channel .str-chat-channel {
+  height: 100%;
+}
+
+/* Override some default Stream Chat styles */
+.slack-layout__channel .str-chat__main-panel {
+  padding: 0;
+}
+
+.slack-layout__channel .str-chat__channel {
+  background-color: #fff;
+}

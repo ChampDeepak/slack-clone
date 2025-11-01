@@ -1,0 +1,56 @@
+/* Custom Channel Preview */
+.channel-preview-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 6px 16px;
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 15px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: left;
+  border-radius: 4px;
+}
+
+.channel-preview-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.channel-preview-button.active {
+  background-color: #4a154b;
+  color: #fff;
+  font-weight: 700;
+}
+
+.channel-preview-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.channel-preview-name {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.channel-preview-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 6px;
+  background-color: #e01e5a;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 10px;
+  flex-shrink: 0;
+}

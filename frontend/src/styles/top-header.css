@@ -1,0 +1,209 @@
+/* Top Header - Horizontal Navigation Bar */
+.top-header {
+  height: 44px;
+  background-color: #611f69;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  gap: 16px;
+}
+
+/* Left Section - Navigation Arrows */
+.top-header__left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.top-header__nav-btn {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.3);
+  transition: all 0.2s;
+}
+
+.top-header__nav-btn:not(:disabled):hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.top-header__nav-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.icon-disabled {
+  width: 18px;
+  height: 18px;
+}
+
+/* Center Section - Search Bar */
+.top-header__center {
+  flex: 1;
+  max-width: 680px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  padding: 0 12px;
+  height: 32px;
+  gap: 8px;
+  transition: all 0.2s;
+}
+
+.search-bar:focus-within {
+  background-color: #fff;
+  border-color: transparent;
+}
+
+.search-bar:focus-within .search-icon,
+.search-bar:focus-within .filter-icon {
+  color: #1d1c1d;
+}
+
+.search-bar:focus-within .search-input {
+  color: #1d1c1d;
+}
+
+.search-bar:focus-within .search-input::placeholder {
+  color: rgba(29, 28, 29, 0.7);
+}
+
+.search-icon {
+  width: 16px;
+  height: 16px;
+  color: rgba(255, 255, 255, 0.8);
+  flex-shrink: 0;
+  transition: color 0.2s;
+}
+
+.search-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  min-width: 0;
+}
+
+.search-input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.search-filter-btn {
+  background: transparent;
+  border: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.filter-icon {
+  width: 16px;
+  height: 16px;
+  color: rgba(255, 255, 255, 0.8);
+  transition: color 0.2s;
+}
+
+.search-filter-btn:hover .filter-icon {
+  color: #fff;
+}
+
+/* Right Section - Actions & User */
+.top-header__right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.notification-badge {
+  padding: 4px 8px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.top-header__avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.top-header__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.huddle-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.huddle-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.huddle-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.more-btn {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  border-radius: 4px;
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.more-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.more-icon {
+  width: 18px;
+  height: 18px;
+}
